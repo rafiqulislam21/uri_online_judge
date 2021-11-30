@@ -1,4 +1,3 @@
-
 x = int(input())
 
 time = x*2
