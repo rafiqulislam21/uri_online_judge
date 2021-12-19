@@ -1,6 +1,20 @@
 t = int(input())
-
-if 1 <= t <= 3000:
-    pa, pb, g1, g2 = list(map(float, input().split()))
-    if 100 <= pa < 1000000 and 100 <= pb < 1000000:
-        # todo
+for i in range(t):
+    pa, pb, g1, g2 = input().split()
+    pa = int(pa)
+    pb = int(pb)
+    g1 = float(g1)
+    g2 = float(g2)
+    a = 0
+    while (pa <= pb):
+        cpa = int((pa * (g1 / 100)))
+        cpb = int((pb * (g2 / 100)))
+        a += 1
+        pa += cpa
+        pb += cpb
+        if (a > 100):
+            break
+    if (a > 100):
+        print("Mais de 1 seculo.")
+    else:
+        print("{} anos.".format(a))
